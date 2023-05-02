@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .box{
+            animation-name :ankit;
+            animation-duration :1s;
+            animation-iteration-count:infinite;
+            /* animation-fill-mode: forwards;   */              /*  here animation will stop after fillup */
+            /* animation-fill-mode: alternate; */               /*jake bapas apne jagah pe aa jaega*/
+            /* animation-timing-function: ease-in; */           /*here animation is slow in starting and fast in ending vise versa with ease-out*/
+            animation-delay: 3s;                                /*it will work after delay of 3 sec*/
+            animation-direction: alternate-reverse;            /*it will go front and turn back again*/
+        }
+
+        @keyframes ankit {
+            from{
+                width: 0px;
+            }
+            to{
+                width: 1550px;
+            }
+        }
+        .box2{
+            animation-name :ankit1;
+            animation-duration :2s;
+            animation-iteration-count:infinite;
+        }
+        @keyframes ankit1 {
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 250px;
+                left: 0px;
+            }
+            75%{
+                top: 250px;
+                left: 250px;
+            }
+            85%{
+                top: 0px;
+                left: 250px;
+            }
+            100%{
+                top: 0px;
+                left: 0px;
+            }
+            
+        }
+
+        /* writing animation in one line
+        animation : animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-fill-mode
+        example is :-
+        animation: ankit 2s ease-in 1s infinite forwars */
+    </style>
+</head>
+<body>
+    <div class="container bg-green-500">
+        <div class="box bg-green-800 w-[250px] h-[250px] relative ">
+            This is a box!!!
+        </div>
+        <div class="box2 bg-green-800 w-[250px] h-[250px] relative text-center">
+            Hello World!! 
+        </div>
+    </div>
+</body>
+</html>
